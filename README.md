@@ -8,7 +8,7 @@ For TurtleHacks docker workshop
 2. Open file app/website.py and edit the "Hello World!" to something else like "Hello YOUR_NAME!"
 
 3. From the CLI, navigate to your project's root directory and build your Dockerfile (don't forget the spaced period at the end):
-<code> docker build -t DOCKERHUB_USERNAME/turtlehacks . </code> 
+```docker build -t DOCKERHUB_USERNAME/turtlehacks . ```
 
 4. After successfully building your image, run this to view your images:
 <code> docker image ls </code>
