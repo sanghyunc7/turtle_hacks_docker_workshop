@@ -23,7 +23,7 @@ docker image ls
 docker run -p 3000:3000 DOCKERHUB_USERNAME/turtlehacks
 ```
 
-6. To find your CONTAINER_NAME:
+6. To find your CONTAINER_NAME (It will under the CREATED NAMES column):
 ```
 docker ps -a
 ```
