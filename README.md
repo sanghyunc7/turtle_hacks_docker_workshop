@@ -7,12 +7,13 @@ For TurtleHacks docker workshop
 
 2. Open file app/website.py and edit the "Hello World!" to something else like "Hello YOUR_NAME!"
 
-3. From the CLI, navigate to your project's root directory and build your Dockerfile (don't forget the spaced period at the end):
+3. From the CLI, navigate to your project's root directory and build your Dockerfile (don't forget the spaced period at the end).
+Also, take a look inside the Dockerfile and see what it's doing:
 ```
 docker build -t DOCKERHUB_USERNAME/turtlehacks .
 ```
 
-4. After successfully building your image, run this to view your images:
+4. View your local images:
 ```
 docker image ls
 ```
@@ -61,8 +62,8 @@ docker pull YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
 ```
 # to stop a container
 docker stop CONTAINER_NAME
-# Run new image using same port 3000 on host
-docker run -p 3000:3000 DOCKERHUB_USERNAME/turtlehacks
-# or run new image using a different port, say 4000 on host
-docker run -p 4000:3000 DOCKERHUB_USERNAME/turtlehacks
+# Run your friend's image using same port 3000 on host
+docker run -p 3000:3000 YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
+# or run your friend's image using a different port, say 4000 on host
+docker run -p 4000:3000 YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
 ```
