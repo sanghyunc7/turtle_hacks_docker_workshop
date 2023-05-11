@@ -3,7 +3,7 @@ For TurtleHacks docker workshop
 
 # Creating and running an image locally
 
-1. Make an account at dockerhub: hub.docker.com
+1. Make an account at dockerhub: [hub.docker.com](https://hub.docker.com/)
 
 2. Open to app/website.py and edit the "Hello World!" to something else like "Hello John!"
 
