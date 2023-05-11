@@ -23,7 +23,7 @@ docker image ls
 docker run -p 3000:3000 DOCKERHUB_USERNAME/turtlehacks
 ```
 
-6. To find your CONTAINER_NAME (It will under the CREATED NAMES column):
+6. In another CLI window, you can find your CONTAINER_NAME (It will under the CREATED NAMES column):
 ```
 docker ps -a
 ```
@@ -34,9 +34,9 @@ docker ps -a
 ```
 docker stop CONTAINER_NAME
 ```
-If you wish to restart the container:
+If you wish to start a stopped container:
 ```
-docker restart CONTAINER_NAME
+docker start -ai CONTAINER_NAME
 ```
 
 # Push an image to the registry
@@ -67,3 +67,7 @@ docker run -p 3000:3000 YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
 # or run your friend's image using a different port, say 4000 on host
 docker run -p 4000:3000 YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
 ```
+
+# Additional resources:
+[[https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,line%20to%20assemble%20an%20image.
+](https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,line%20to%20assemble%20an%20image.)](https://docs.docker.com/engine/reference/builder/)
