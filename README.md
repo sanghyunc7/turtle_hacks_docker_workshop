@@ -2,19 +2,49 @@
 For TurtleHacks docker workshop
 
 # Creating and running an image locally
-1. Open to app/website.py and edit the "Hello World!" to something else like "Hello John!"
 
-2. Go to the project's root directory and run this (don't forget the spaced period at the end):
-<code> docker build -t your_name . </code> 
-your_name should be the name of your image
+1. Make an account at dockerhub: hub.docker.com
 
-3. After successfully building your image, run this to view your images:
+2. Open to app/website.py and edit the "Hello World!" to something else like "Hello John!"
+
+3. Go to the project's root directory and run this (don't forget the spaced period at the end):
+<code> docker build -t DOCKERHUB_USERNAME/turtlehacks . </code> 
+
+4. After successfully building your image, run this to view your images:
 <code> docker image ls </code>
 
-4. Run your image:
-<code> docker run -p 3000:3000 your_name </code>
+5. Run your image:
+<code> docker run -p 3000:3000 DOCKERHUB_USERNAME/turtlehacks </code>
 
-5. Go to your web browser, and navigate to http://127.0.0.1:3000
+6. To find your CONTAINER_NAME:
+<code> docker ps -a </code>
 
-# Push an image to others
+7. Go to your web browser, and navigate to http://127.0.0.1:3000
 
+8. To stop your container:
+<code> docker stop CONTAINER_NAME </code>
+If you wish to restart the container:
+<code> docker restart CONTAINER_NAME </code>
+
+# Push an image to the registry
+
+1. Login to docker hub from your CLI (follow username/password instruction given by prompt):
+<code> docker login </code>
+
+2. Upload your image to dockerhub:
+<code> docker push DOCKERHUB_USERNAME/turtlehacks </code>
+
+# Pull an image that your friend (or me) has published and deploy it:
+
+1. Pull image:
+<code> docker pull YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks </code>
+
+2. Run image (note: you cannot use the same port for multiple containers, so you must stop your previous one or use a new port):
+<code>
+  # to stop a container
+  docker stop CONTAINER_NAME
+  # Run new image using same port 3000 on host
+  docker run -p 3000:3000 DOCKERHUB_USERNAME/turtlehacks
+  # or run new image using a different port, say 4000 on host
+  docker run -p 4000:3000 DOCKERHUB_USERNAME/turtlehacks
+</code>
