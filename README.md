@@ -51,7 +51,7 @@ docker login
 docker push DOCKERHUB_USERNAME/turtlehacks
 ```
 
-# Pull an image that your friend (or me) has published and deploy it:
+# Pull an image that your friend has published and deploy it:
 
 1. Pull image:
 ```
