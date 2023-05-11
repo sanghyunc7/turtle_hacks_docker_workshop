@@ -69,5 +69,4 @@ docker run -p 4000:3000 YOUR_FRIENDS_DOCKERHUB_USERNAME/turtlehacks
 ```
 
 # Additional resources:
-[[https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,line%20to%20assemble%20an%20image.
-](https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,line%20to%20assemble%20an%20image.)](https://docs.docker.com/engine/reference/builder/)
+https://docs.docker.com/engine/reference/builder/
